@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FONAZO - Tienda de Celulares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    <header>
+        <h1>FONAZO  📱 </h1>
+        <p>¡Los mejores celulares a un clic!</p>
+    </header>
+    <div class="announcement">
+         📢  ¡Promoción especial!
+        Envío gratis en compras mayores a $500 + 10% OFF pagando con transferencia bancaria.
+    <div id="cart" onclick="document.getElementById('checkout').style.display = 'block'; updateCartDisplay();">
+            🛒 (<span id="cart-count">0</span>)
+    </div>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#politicas">Políticas</a>
+    </nav>
+    <section class="container" id="inicio">
+        <h2>Destacados del Mes</h2>
+        <div class="slider">
+            <div class="product">
+                <img src="descarga (1).jpg" alt="iPhone 13">
+                <h3>iPhone 13 128GB</h3>
+                <p>6.1", 128GB, Cámara 12MP</p>
+                <p><strong>S/2600</strong></p>
+                <button onclick="addToCart('iPhone 13 128GB', 799)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="descarga.jpg" alt="Samsung S22">
+                <h3>Samsung Galaxy S22</h3>
+                <p>6.1", 128GB, 8GB RAM, Cámara 50MP</p>
+                <p><strong>S/3000</strong></p>
+                <button onclick="addToCart('Samsung Galaxy S22', 699)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="xiaomi redmi 12.jpg" alt="xiaomi redmi 12">
+                <h3>Xiaomi Redmi Note 12</h3>
+                <p>6.67", 128GB, 6GB RAM, Cámara 50MP</p>
+                <p><strong>S/800</strong></p>
+                <button onclick="addToCart('Xiaomi Redmi Note 12', 299)">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container" id="productos">
+        <h2>Catálogo de Celulares</h2>
+        <div class="products">
+            <div class="product">
+                <img src="IPHONE 14.jpg" alt="iPhone 14">
+                <h3>iPhone 14 128GB</h3>
+                <p>6.1", 128GB, Cámara 12MP</p>
+                <p><strong>$899</strong></p>
+
+                <button onclick="addToCart('iPhone 14 128GB', 899)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="GALAXY S23.jpg" alt="Galaxy S23">
+                <h3>Samsung Galaxy S23</h3>
+                <p>6.1", 256GB, 8GB RAM, Cámara 50MP</p>
+                <p><strong>$849</strong></p>
+                <button onclick="addToCart('Samsung Galaxy S23', 849)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="REDMI 13.jpg" alt="Redmi Note 13">
+                <h3>Xiaomi Redmi Note 13</h3>
+                <p>6.67", 128GB, 6GB RAM, Cámara 64MP</p>
+                <p><strong>$329</strong></p>
+                <button onclick="addToCart('Xiaomi Redmi Note 13', 329)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="MOTOROLA EDGE 30.jpg" alt="Motorola Edge 30">
+                <h3>Motorola Edge 30</h3>
+                <p>6.5", 256GB, 8GB RAM, Cámara 50MP</p>
+                <p><strong>$479</strong></p>
+            
+                <button onclick="addToCart('Motorola Edge 30', 479)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="REALME 11 PRO.jpg" alt="Realme 11 Pro">
+                <h3>Realme 11 Pro</h3>
+                <p>6.7", 256GB, 8GB RAM, Cámara 100MP</p>
+                <p><strong>$399</strong></p>
+                <button onclick="addToCart('Realme 11 Pro', 399)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="HUAWEI NOVA 11.jpg" alt="Huawei Nova 11">
+                <h3>Huawei Nova 11</h3>
+                <p>6.7", 256GB, Cámara 50MP</p>
+                <p><strong>$449</strong></p>
+                <button onclick="addToCart('Huawei Nova 11', 449)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="ONE PLUSE.jpg" alt="OnePlus Nord CE 3">
+                <h3>OnePlus Nord CE 3</h3>
+                <p>6.7", 128GB, 8GB RAM, Cámara 108MP</p>
+                <p><strong>$379</strong></p>
+                <button onclick="addToCart('OnePlus Nord CE 3', 379)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="POCO X5 PRO.jpg" alt="POCO X5 PRO">
+                <h3>POCO X5 Pro</h3>
+                <p>6.67", 256GB, 8GB RAM, Cámara 108MP</p>
+                <p><strong>$329</strong></p>
+                <button onclick="addToCart('POCO X5 Pro', 329)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="NOKIA G22.jpg" alt="Nokia G22">
+                <h3>Nokia G22</h3>
+            
+                <p>6.5", 128GB, 4GB RAM, Cámara 50MP</p>
+                <p><strong>$199</strong></p>
+                <button onclick="addToCart('Nokia G22', 199)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="HONOR MAGIC 5 LITE.jpg" alt="Honor Magic5 Lite">
+                <h3>Honor Magic5 Lite</h3>
+                <p>6.67", 128GB, 6GB RAM, Cámara 64MP</p>
+                <p><strong>S/359</strong></p>
+                <button onclick="addToCart('Honor Magic5 Lite', 359)">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="products">
+            <div class="product">
+            
+                <img src="ZTE BLADE.jpg" alt="ZTE Blade V40">
+                <h3>ZTE Blade V40</h3>
+                <p>6.6", 128GB, 4GB RAM, Cámara 50MP</p>
+                <p><strong>S/189</strong></p>
+                <button onclick="addToCart('ZTE Blade V40', 189)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="TCL 40.jpg" alt="TCL 40 NXTPAPER">
+                <h3>TCL 40 NXTPAPER</h3>
+                <p>6.78", 256GB, 8GB RAM, Cámara 50MP</p>
+                <p><strong>S/299</strong></p>
+                <button onclick="addToCart('TCL 40 NXTPAPER', 299)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="INFINIX ZERO.jpg" alt="Infinix Zero 5G">
+                <h3>Infinix Zero 5G</h3>
+                <p>6.78", 128GB, 8GB RAM, Cámara 50MP</p>
+                <p><strong>$249</strong></p>
+                <button onclick="addToCart('Infinix Zero 5G', 249)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="VIVO V27.jpg" alt="Vivo V27">
+                <h3>Vivo V27</h3>
+                <p>6.78", 256GB, 8GB RAM, Cámara 64MP</p>
+                <p><strong>$449</strong></p>
+                <button onclick="addToCart('Vivo V27', 449)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="GOGLE PIXEL.jpg" alt="Google Pixel 7a">
+                <h3>Google Pixel 7a</h3>
+                <p>6.1", 128GB, 8GB RAM, Cámara 64MP</p>
+                <p><strong>$499</strong></p>
+                <button onclick="addToCart('Google Pixel 7a', 499)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="ASUS ROG PHONE 7.jpg" alt="Asus ROG Phone 7">
+                <h3>Asus ROG Phone 7</h3>
+                <p>6.78", 512GB, 16GB RAM, Cámara 50MP</p>
+                <p><strong>$999</strong></p>
+                <button onclick="addToCart('Asus ROG Phone 7', 999)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="LENOVO LEGION.jpg" alt="Lenovo Legion Y70">
+                <h3>Lenovo Legion Y70</h3>
+                <p>6.67", 512GB, 12GB RAM, Cámara 50MP</p>
+                <p><strong>$549</strong></p>
+                <button onclick="addToCart('Lenovo Legion Y70', 549)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="MEIZU 20.jpg" alt="Meizu 20">
+                <h3>Meizu 20</h3>
+                <p>6.55", 256GB, 12GB RAM, Cámara 50MP</p>
+                <p><strong>$529</strong></p>
+                <button onclick="addToCart('Meizu 20', 529)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="Sony Xperia 10 V.jpg" alt="Sony Xperia 10 V">
+                <h3>Sony Xperia 10 V</h3>
+                <p>6.1", 128GB, 6GB RAM, Cámara 48MP</p>
+                <p><strong>$429</strong></p>
+                <button onclick="addToCart('Sony Xperia 10 V', 429)">Añadir al carrito</button>
+            </div>
+            <div class="product">
+                <img src="ALCATEL 1S.jpg" alt="Alcatel 1S 2023">
+                <h3>Alcatel 1S 2023</h3>
+                <p>6.5", 64GB, 3GB RAM, Cámara 13MP</p>
+                <p><strong>$129</strong></p>
+                <button onclick="addToCart('Alcatel 1S 2023', 129)">Añadir al carrito</button>
+            </div>
+        </div>
+    </section> 
+    
+    <section class="container" id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>En FONAZO queremos acercar la mejor tecnología móvil a todos.
+Valoramos la confianza, la rapidez y la atención personalizada para que encuentres tu próximo celular ideal.</p>
+    </section>
+    <section class="container" id="contacto">
+        <h2>Contacto</h2>
+        <p> 📞  Teléfono: +51 962 723 071</p>
+        <p> 📧  Email: contacto@fonazo.com</p>
+        <p> 💬  WhatsApp: <a href="https://wa.me/962723071" target="_blank">Chat en Vivo</a></p>
+    </section>
+    <section class="container" id="politicas">
+        <h2>Políticas</h2>
+        <p> 🔒  <strong>Privacidad:</strong> Protegemos tus datos de forma segura.</p>
+        <p> 🚚  <strong>Envíos:</strong> Gratis a partir de $500.
+Seguimiento en todo momento.</p>
+        <p> 🔄  <strong>Cambios y Devoluciones:</strong> Hasta 7 días después de tu compra.</p>
+    </section>
+    <div id="checkout">
+        <h2>Checkout</h2>
+        <ul id="order-items"></ul>
+        <div id="order-total-container">  <span id="order-total-label">Total:</span>  <span id="order-total">0.00 S/</span>  </div>
+        <form id="payment-form" onsubmit="submitCheckout(event)">
+            <p><strong>Elige método de pago:</strong></p>
+            <label for="tarjeta"><input type="radio" id="tarjeta" name="payment" value="Tarjeta" required> Tarjeta de Crédito/Débito</label><br>
+            <label for="transferencia"><input type="radio" id="transferencia" name="payment" value="Transferencia"> Transferencia Bancaria</label><br>
+            <label for="mercadoPago"><input type="radio" id="mercadoPago" name="payment" value="MercadoPago"> MercadoPago</label><br><br>
+            <input type="submit" value="Confirmar Compra">
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 FONAZO. Todos los derechos reservados.</p>
+        <p>Instagram: @fonazo_oficial | Facebook: Fonazo Oficial | TikTok: @fonazo_tech</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
